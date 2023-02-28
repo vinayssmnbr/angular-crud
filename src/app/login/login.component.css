@@ -1,0 +1,16 @@
+.login-form{
+    width: 200px;
+    border: 1px solid grey;
+    background:#ddd;
+    margin:0 auto;
+    padding: 40px;
+}
+.login-form input{
+    padding:10px
+}
+.sign button{
+    padding:10px 20px
+}
+.sign{
+    margin:10px 10px;
+}

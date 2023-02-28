@@ -1,0 +1,18 @@
+<form  [formGroup]="loginForm1" (ngSubmit)="loginuser()">
+    <div class="login-form">
+        <div class="sign">
+        <button><a routerLink="login">SignIn</a></button>
+        <button><a routerLink="signup">signup</a></button>   
+        </div>
+
+    <input type="text" placeholder="Enter Email" name="user" formControlName="user">
+    <br />
+    <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span> -->
+    <br />
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+    <br />
+    <!-- <span *ngIf="passwordValidators && passwordValidators.invalid && passwordValidators.touched" style="color:red">This field is required</span> -->
+    <br />
+    <button [disabled]="loginForm1.invalid">Login</button>
+</div>
+</form>
