@@ -1,22 +1,30 @@
-<!-- <button (click)="addData(name,email)">Add data</button>
-<li *ngIf="session"></li>
-<h1>Id:{{session.id}}</h1>
-<h1>Name:{{session.name}}</h1>
-<h1>Email:{{session.email}}</h1> -->
+<app-secondlocal [parent]="tododata"></app-secondlocal>
 
-<label for="">Name</label>
+<!-- <label for="">Name</label>
 <input type="text" placeholder="Enter name" [(ngModel)]="userservice.data.name"><br><br>
 <label for="">Email</label>
 <input type="text" placeholder="Enter name" [(ngModel)]="userservice.data.email">
-<button (click)="userservice.addData()">Add</button>
+<button (click)="userservice.addData()">Add</button> -->
 
+<ul>
 <li *ngFor="let item of userservice.dataArray">
-    <p>Name:{{item.name}}</p>
-    <p>Emal:{{item.email}}</p>
+    <div class="col-3">
+        <label for="">NAME</label>
+        <p>{{item.name}}</p>
+</div>
+<div class="col-3">
+    <label for="">EMAIL</label>
+    <p>{{item.email}}</p>
+</div>
+    <div class="col-3">
 <button (click)="userservice.editData(item)">Edit</button>
+</div>
+<div class="col-3">
 <button (click)="userservice.removeData(item.Id)">Remove</button>
-</li>
+</div>
 
+</li>
+</ul>
 <label for="">Name</label>
 <input type="text" placeholder="Enter name" [(ngModel)]="userservice.name"><br><br>
 <label for="">Email</label>

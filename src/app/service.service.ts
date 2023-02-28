@@ -30,13 +30,13 @@ sendData(data:any) {
     'Content-Type': 'application/json',
   });
   let postOpt = Object.assign({ headers: headers, method: 'post' });
-// console.log(data)
   return this.http.post(url,data, postOpt);
 }
 
 
+
+
 addData(){
-  debugger
   this.data.Id=this.dataArray.length+1
   this.dataArray.push(new Todo({
     Id:this.data.Id, 
@@ -53,21 +53,20 @@ addData(){
 }
 
 editData(item:any){
-  debugger
   this.data=item
+  localStorage.setItem('studentdetail',JSON.stringify(this.data))
 
 }
 
 updateData(){
-  debugger
   const record=this.dataArray.find(m=>m.Id==this.data.Id)
+  localStorage.setItem('studentdetail',JSON.stringify(record))
+
   record.name=this.name;
-  // record.name=this.email
 }
 
 removeData(id:any){
 for(let i=0; i<this.dataArray.length; i++){
-  // debugger
   if(this.dataArray[i].Id ==id){
     this.dataArray.splice(i,1);
   }

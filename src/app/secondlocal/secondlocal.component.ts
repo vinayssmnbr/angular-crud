@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-secondlocal',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./secondlocal.component.css']
 })
 export class SecondlocalComponent {
+constructor(public userservice:ServiceService){}
+  @Input() parent:any
 
 }

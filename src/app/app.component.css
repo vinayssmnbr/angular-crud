@@ -1,0 +1,14 @@
+button{
+    float:right;
+    padding:10px 20px;
+    background: blue;
+    border: 1px solid blue;
+    /* color:#fff */
+
+}
+button a{
+color:white;
+text-decoration: none;
+cursor: pointer;
+
+}

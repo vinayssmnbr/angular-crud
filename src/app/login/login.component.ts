@@ -25,12 +25,12 @@ export class LoginComponent {
 
 
   }
-  // get uservalidators(){
-  //   return this.loginForm1.get('user')
-  // }
+  get uservalidators(){
+    return this.loginForm1.get('user')
+  }
   
-  // get passwordValidators(){
-  //   return this.loginForm1.get('password')
-  // }
+  get passwordValidators(){
+    return this.loginForm1.get('password')
+  }
 
 }

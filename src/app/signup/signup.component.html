@@ -1,1 +1,25 @@
-<p>signup works!</p>
+
+<div class="signup-form">
+<h2>Sign Up</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>Email</label><br>
+    <input type="text" formControlName="email" class="form-control" />
+    <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br> -->
+    <label>Username</label><br>
+    <input type="text" formControlName="username" class="form-control" />
+    <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br>
+    <label>Password</label><br>
+    <input type="text" formControlName="password" class="form-control" />
+    <span *ngIf="passwordValidators  && passwordValidators.invalid && passwordValidators.touched" style="color:red">this field is required</span><br><br>
+    <label>confirm Password</label><br>
+    <input type="text" formControlName="confirmpassword" class="form-control" />
+    <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br> -->
+    <label>Company</label><br>
+    <input type="text" formControlName="company" class="form-control" />
+    <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br> -->
+    <div class="btn">
+    <button [disabled]="registerForm.invalid">submit</button>
+</div>
+    </form>
+
+</div>
