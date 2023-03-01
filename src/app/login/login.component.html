@@ -1,8 +1,9 @@
 <form [formGroup]="loginForm1" (ngSubmit)="loginuser()">
     <div class="login-form">
         <div class="sign">
-            <button><a routerLink="login">SignIn</a></button>
-            <button><a routerLink="signup">signup</a></button>
+            <button><a routerLink="/login">SignIn</a></button>
+            <button><a routerLink="/signup">signup</a></button>
+         </div>
             <!-- <li><a routerLink="signup">SignUp</a></li> -->
 
             <h2>LogIn</h2>
@@ -17,8 +18,8 @@
             <!-- <span *ngIf="passwordValidators && passwordValidators.invalid && passwordValidators.touched" style="color:red">This field is required</span> -->
             <br />
             <div class="btn">
-                <button [disabled]="loginForm1.invalid">Login</button>
+                <button [disabled]="loginForm1.invalid" routerLink="/dashboard">Login</button>
             </div>
         </div>
-    </div>
+
 </form>

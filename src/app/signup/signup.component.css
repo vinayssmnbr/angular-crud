@@ -26,6 +26,18 @@ input{
     color: white;
     border: 1px solid blue;
     cursor: pointer;
+    margin:10px
 
 
+}
+.sign button{
+    padding:10px 20px;
+    margin:10px;
+}
+.sign{
+    margin:10px 10px;
+}
+.sign button a{
+    text-decoration: none;
+    font-size: 20px;
 }
