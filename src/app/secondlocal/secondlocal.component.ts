@@ -7,6 +7,7 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./secondlocal.component.css']
 })
 export class SecondlocalComponent {
+  showDetail=false;
 constructor(public userservice:ServiceService){}
   @Input() parent:any
 

@@ -2,8 +2,8 @@
     width: 400px;
     border: 1px solid #ddd;
     background:#ddd;
-    margin:0 auto;
-    padding: 40px;
+    margin:20px auto;
+    padding:0 20px;
     border-radius: 10px;
 }
 .login-form h2{
@@ -11,8 +11,8 @@
     font-size: 24px;
 }
 .login-form input{
-    padding:10px 0;
-    width: 400px;
+    padding:10px 15px;
+    width: 100%;
 }
 .sign button{
     padding:10px 20px;
@@ -35,8 +35,9 @@
     background-color: blue;
     border-radius: 10px;
     color: white;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     cursor: pointer;
-    margin:10px
+    margin:10px;
+    border:none
 
 }

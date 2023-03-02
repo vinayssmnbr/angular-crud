@@ -1,11 +1,10 @@
-ul{
+/* ul{
     width:100%
 
 }
 ul li{
-    /* padding:50px; */
+    padding:50px;
     height: 100px;
-    border:1px solid red;
     list-style: none;
 }
 ul li p{
@@ -15,7 +14,6 @@ text-align: center;
     width:25%;
     margin: 0 15px;
     float:left;
-    border:1px solid blue;
     padding:10px;
 
 }
@@ -23,4 +21,29 @@ text-align: center;
     font-size: 20px;
     font-weight: 600;
     margin-left: 110px;
+} */
+
+.list{
+  width:1170px;
+  padding: 0 60px;
+  margin: 20px auto;
+}
+.container{
+  border: 1px solid red;
+  background-color: #ddd;
+}
+.col li{
+  list-style-type: none;
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+}
+p i{
+border: none;
+font-size: 20px;
+color: red;
+cursor: pointer;
+}
+.model-body input{
+  width: 100%;
+  border:1px solid red
 }

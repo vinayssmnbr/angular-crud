@@ -8,12 +8,12 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./local.component.css']
 })
 export class LocalComponent {
+    showDetail=false;
 
-    
     constructor( public userservice:ServiceService){
-    
+
   }
 tododata:any
 
 }
-  
+
