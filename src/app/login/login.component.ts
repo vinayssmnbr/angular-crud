@@ -16,10 +16,10 @@ export class LoginComponent {
   })
   loginuser(){
     // console.log(this.loginForm1.value)
-    alert("login successful")
+    // alert("login successful")
     this.fb.sendData(this.loginForm1.value).subscribe((res:any)=>{
       this.fb.sendData(this.loginForm1)
-      console.log(res)
+      // console.log(res)
     })
 
 

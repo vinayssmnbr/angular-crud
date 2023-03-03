@@ -1,1 +1,167 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  background: transparent;
+  list-style: none;
+}
+:root {
+  --color-blueLight-bg:#F4FAFD;
+  --color-primary-orange: #EE7D00;
+  --color-primary-purple: hsl(217, 49%, 37%);
+  --color-white-bg: #DDD;
+  --color-white-light: #fff;
+  --color-primary-blue: #38327C;
+}
+html {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+body {
+  min-height: 100%;
+  width: 100%;
+  line-height: 1.4;
+  color: #222;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+.row::after,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[class^="col-"] {
+  float: left;
+  padding: 0 15px;
+}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section {
+    padding: 100px 0;
+  }
+
+  /*=====================================Header===============================*/
+  header {
+    width: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+  }
+  header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px
+  }
+  .logo-part {
+    margin-right: auto;
+    width:100%
+  }
+
+  ul.navigation{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  ul.navigation > li a {
+    color: #343434;
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    line-height: 1.2;
+    border-bottom:2px solid transparent;
+
+  }
+  .navigation a.active,.navigation a:hover {
+    color: var(--color-primary-orange);
+    border-bottom-color: var(--color-primary-orange); ;
+  }
+  .Btn {
+    font-size: 14px;
+    outline: none;
+    padding: 12px 20px;
+    min-height: 40px;
+    min-width: 115px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color:var(--color-primary-blue);
+  }
+
+  .Btn--primary {
+    border-color: var(--color-primary-orange);
+    background: var(--color-primary-orange);
+    color:var(--color-white-light)
+  }
+  .Btn--outline {
+    border-color: var(--color-primary-orange);
+    background-color: transparent;
+    color: var(--color-primary-orange);
+  }
+  .Btn--rounded {
+    border-radius: 10px;
+  }
+
+  .Btn--shadow {
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+  }

@@ -11,9 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-// import { HeaderComponent } from './header/header.component';
-// import { SidebarComponent } from './sidebar/sidebar.component';
-import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
 
 
@@ -24,9 +23,6 @@ import { HomeComponent } from './home/home.component';
     SecondlocalComponent,
     LoginComponent,
     SignupComponent,
-    // HeaderComponent,
-    // SidebarComponent,
-    FooterComponent,
     HomeComponent,
   ],
   imports: [
@@ -35,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    DashboardModule
 
 
 

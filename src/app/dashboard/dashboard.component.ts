@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,ViewChild } from '@angular/core';
+import { FooterComponent } from "./footer/footer.component";
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

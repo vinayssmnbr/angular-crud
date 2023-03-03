@@ -1,0 +1,14 @@
+aside
+{
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  bottom: 100px;
+  width: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+}
