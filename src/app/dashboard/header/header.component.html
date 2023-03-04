@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header id="myHeader">
+
+   <header id="myHeader">
     <div class="container">
         <div class="logo-part"><img src="LPU DE.png" alt=""></div>
         <nav>
             <ul class="navigation">
-                <li><a class="home" routerLink="about">About</a></li>
-                <li><a href="#about">Admissions</a></li>
+                <li><a (click)="link.aboutf()">About</a></li>
+                <li><a (click)="link.contactf()">Contact</a></li>
                 <li><a href="#service">Acedemics</a></li>
                 <li><a href="">Research</a></li>
                 <li><a class="active" href="#team">Placements</a></li>
@@ -25,5 +17,3 @@
         </nav>
     </div>
 </header>
-</body>
-</html>

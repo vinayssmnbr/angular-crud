@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { DashService } from '../dash.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Output() featureSelected=new EventEmitter<string>();
+  onselect(feature:string)
+  {
+this.featureSelected.emit(feature)
+  }
+  constructor(public link:DashService){}
 
 }

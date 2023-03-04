@@ -8,6 +8,8 @@ import { NewCompComponent } from './new-comp/new-comp.component';
 import { Routes,RouterModule  } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { AboutComponent } from './about/about.component';
+import { DashService } from './dash.service';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -19,6 +21,7 @@ import { AboutComponent } from './about/about.component';
     NewCompComponent,
     DashboardComponent,
     AboutComponent,
+    ContactComponent,
 
   ],
   imports: [
@@ -26,6 +29,7 @@ import { AboutComponent } from './about/about.component';
     DashboardRoutingModule,
     RouterModule,
   ],
+  providers:[DashService],
   exports:[DashboardComponent]
 })
 export class DashboardModule { }

@@ -1,3 +1,23 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<app-footer></app-footer>
+<div>
+    <div>
+        <app-header></app-header>
+    </div>
+    <div>
+      <app-sidebar></app-sidebar>
+  </div>
+    <main>
+    <div style="height: calc(100vh - 180px); display: flex;">
+        <div style="flex-grow: 1">
+            <app-about *ngIf="link?.about"></app-about>
+
+        </div>
+        <div style="flex-grow: 1">
+            <app-contact *ngIf="link?.contact"></app-contact>
+        </div>
+
+    </div>
+</main>
+    <div>
+        <app-footer></app-footer>
+    </div>
+</div>

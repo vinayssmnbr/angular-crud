@@ -1,4 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
+import { DashService } from './dash.service';
 import { FooterComponent } from "./footer/footer.component";
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,7 @@ import { FooterComponent } from "./footer/footer.component";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  constructor(public link:DashService){}
+ 
 
 }
