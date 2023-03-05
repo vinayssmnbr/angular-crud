@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

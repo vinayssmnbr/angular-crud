@@ -15,25 +15,24 @@ footer{
 .copyright{
 
   color: #fff;
-  background-color: #ddd;
+  background-color:  #37517f;
+
 }
 .copy{
   float:left;
-  color:#252b33;
+  color:#fff;
 }
 .copy span{
-  color:#20c997
+  color:black
 }
 .footer-right{
 float: right;
 margin-right: 30px;
-color:#252b33;
+color:#fff;
 }
 .footer-item span{
 padding:20px;
 color:#fff;
 }
-.footer-right:hover{
-color:#20c997
-}
+
 
