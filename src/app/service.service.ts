@@ -21,9 +21,9 @@ name:any
     console.log(localData);
     // this.dataArray=JSON.parse(localData)
 
-    if(this.dataArray!=null){
-      this.dataArray=JSON.parse(localData)
-    }
+    // if(this.dataArray!=null){
+    //   this.dataArray=JSON.parse(localData)
+    // }
   }
 
 
