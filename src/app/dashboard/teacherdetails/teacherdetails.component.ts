@@ -25,7 +25,7 @@ export class TeacherdetailsComponent {
     this.teacherdetail=this.fb.group({
       name:['',Validators.required],
       email:['',[Validators.required,Validators.email]],
-      userid:['',[Validators.required,Vali Validators.minLength(8)]],
+      userid:['',[Validators.required, Validators.minLength(8),Validators.maxLength(8)]],
       phone: ['', [ Validators.required,Validators.pattern("^[0-9]*$"),Validators.minLength(10), Validators.maxLength(10)]],
       pincode:['',Validators.required],
       address:['',Validators.required],
