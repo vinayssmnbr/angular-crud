@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DashService } from '../dash.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
+  constructor(public link:DashService){}
 
 }

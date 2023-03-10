@@ -15,7 +15,7 @@
             <br />
             <input type="password" placeholder="Enter Password" name="password" formControlName="password">
             <br />
-            <!-- <span *ngIf="passwordValidators && passwordValidators.invalid && passwordValidators.touched" style="color:red">This field is required</span> -->
+            <span *ngIf="passwordValidators && passwordValidators.invalid && passwordValidators.touched" style="color:red">This field is required</span>
             <br />
             <div class="btn">
                 <button [disabled]="loginForm1.invalid" routerLink="/dashboard">Login</button>

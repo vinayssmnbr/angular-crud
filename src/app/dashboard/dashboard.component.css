@@ -3,5 +3,5 @@ main
     width: calc(100% - 200px);
     margin-left:200PX;
     margin-top: 80px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }

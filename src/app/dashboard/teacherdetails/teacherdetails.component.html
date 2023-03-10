@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<div class="teacher-Forms">
+  <form [formGroup]="teacherdetail" (ngSubmit)="onAdd()">
+    <h2>teacherdetails Form</h2>
+
+    <label for="">Name</label>
+    <input type="text" formControlName="name" class="form-control" [(ngModel)]="data.name" />
+    <span *ngIf="namevalidators  && namevalidators.invalid && namevalidators.touched" style="color:red">this field is
+      required</span><br>
+
+    <label>Email</label><br>
+    <input type="text" formControlName="email" class="form-control" [(ngModel)]="data.email" />
+    <span *ngIf="emailvalidators  && emailvalidators.invalid && emailvalidators.touched" style="color:red">this field is
+      required</span><br>
+
+
+    <label>UserId</label><br>
+    <input type="text" formControlName="userid" class="form-control"  [(ngModel)]="data.userid " />
+    <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is
+      required</span><br>
+
+    <label>Mobile NO.</label><br>
+    <input type="text" formControlName="phone" class="form-control"  [(ngModel)]="data.phone"/>
+    <span *ngIf="phonevalidators  && phonevalidators.invalid && phonevalidators.touched" style="color:red">this field is
+      required</span><br>
+
+    <label>Pin Code</label><br>
+    <input type="text" formControlName="pincode" class="form-control"  [(ngModel)]="data.pincode"/>
+    <span *ngIf="pinvalidators  && pinvalidators.invalid && pinvalidators.touched" style="color:red">this field is
+      required</span><br>
+
+    <label>Address</label><br>
+    <input type="text" formControlName="address" class="form-control"  [(ngModel)]="data.address"/>
+    <span *ngIf="addressvalidators  && addressvalidators.invalid && addressvalidators.touched" style="color:red">this
+      field is required</span><br>
+
+    <div class="btn">
+      <button [disabled]="teacherdetail.invalid">Add</button>
+
+    </div>
+  </form>
+</div>
+
+<section class="list">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Name</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.name}}</p>
+        </li>
+      </div>
+      <div class="col">
+        <h4>Email</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.email}}</p>
+        </li>
+      </div>
+      <div class="col">
+        <h4>Phone</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.phone}}</p>
+        </li>
+      </div>
+      <div class="col">
+        <h4>UserId</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.userid}}</p>
+        </li>
+      </div>
+      <div class="col">
+        <h4>Pin Code</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.pincode}}</p>
+        </li>
+      </div>
+      <div class="col">
+        <h4>Address</h4>
+        <li *ngFor="let item of dataArray">
+          <p>{{item.address}}</p>
+        </li>
+      </div>
+      <div class="col"><h4>Edit</h4>
+  <li *ngFor="let item of dataArray">
+  <p (click)="editData(item)" (click)="showDetail=true"><i class="las la-pen"></i></p>
+  </li>
+    </div>
+    <div class="col"><h4>Remove</h4>
+  <li *ngFor="let item of dataArray">
+  <p (click)="data.removeData(item.Id)"><i class="las la-trash"></i></p>
+    </div>
+  </div>
+  </div>
+
+</section>

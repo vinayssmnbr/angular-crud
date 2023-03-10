@@ -7,11 +7,11 @@ import { DashService } from '../dash.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Output() featureSelected=new EventEmitter<string>();
-  onselect(feature:string)
-  {
-this.featureSelected.emit(feature)
-  }
+//   @Output() featureSelected=new EventEmitter<string>();
+//   onselect(feature:string)
+//   {
+// this.featureSelected.emit(feature)
+//   }
   constructor(public link:DashService){}
 
 }

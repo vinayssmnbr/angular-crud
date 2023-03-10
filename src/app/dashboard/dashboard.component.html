@@ -14,6 +14,12 @@
         <div style="flex-grow: 1">
             <app-contact *ngIf="link?.contact"></app-contact>
         </div>
+        <div style="flex-grow: 1">
+          <app-teacherdetails *ngIf="link?.teacherdetails"></app-teacherdetails>
+      </div>
+      <div style="flex-grow: 1">
+        <app-studentdetails *ngIf="link?.studentdetails"></app-studentdetails>
+    </div>
 
     </div>
 </main>

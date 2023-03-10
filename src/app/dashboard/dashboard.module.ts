@@ -10,6 +10,10 @@ import { DashboardComponent } from './dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { DashService } from './dash.service';
 import { ContactComponent } from './contact/contact.component';
+import { TeacherdetailsComponent } from './teacherdetails/teacherdetails.component';
+import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormControl,FormGroup } from '@angular/forms';
 
 
 
@@ -22,12 +26,19 @@ import { ContactComponent } from './contact/contact.component';
     DashboardComponent,
     AboutComponent,
     ContactComponent,
+    TeacherdetailsComponent,
+    StudentdetailsComponent,
 
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // FormControl,
+    // FormGroup,
+
   ],
   providers:[DashService],
   exports:[DashboardComponent]
