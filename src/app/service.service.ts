@@ -30,15 +30,30 @@ name:any
 isLoggedIn=new BehaviorSubject<boolean>(false)
 sendData(data:any) {
   console.log(data)
-  const url = '  https://webhook.site/1baed120-aef0-440e-82b7-3feecf6a5aa9';
+  const url = 'http://localhost:3000/api/studentroute/store';
   let headers = new HttpHeaders({
     'Content-Type': 'application/json',
   });
   this.isLoggedIn.next(true);
-  // this.router.navigate(['login'])
   let postOpt = Object.assign({ headers: headers, method: 'post' });
   return this.http.post(url,data, postOpt);
 }
+
+url="http://localhost:3000/api/studentroute/store"
+url1="http://localhost:3000/api/studentroute/show"
+
+
+users(username: string, password: string){
+  return this.http.get(this.url1)
+}
+saveUser(data){
+  this.isLoggedIn.next(true);
+  return this.http.post(this.url,data)
+
+}
+
+
+
 addData(){
   this.data.Id=this.dataArray.length+1
   this.dataArray.push(({

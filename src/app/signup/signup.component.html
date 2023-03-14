@@ -4,7 +4,7 @@
         <button><a routerLink="/signup">signup</a></button>
      </div>
 <h2>Sign Up</h2>
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)">
     <label>Email</label><br>
     <input type="text" formControlName="email" class="form-control" />
     <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br> -->
@@ -14,9 +14,6 @@
     <label>Password</label><br>
     <input type="text" formControlName="password" class="form-control" />
     <!-- <span *ngIf="passwordValidators  && passwordValidators.invalid && passwordValidators.touched" style="color:red">this field is required</span><br><br> -->
-    <label>confirm Password</label><br>
-    <input type="text" formControlName="confirmpassword" class="form-control" />
-    <!-- <span *ngIf="uservalidators  && uservalidators.invalid && uservalidators.touched" style="color:red">this field is required</span><br><br> -->
     <label>Company</label><br>
     <input type="text" formControlName="company" class="form-control" />
     <div class="btn">

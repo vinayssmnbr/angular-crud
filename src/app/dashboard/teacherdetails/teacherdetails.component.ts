@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-teacherdetails',
@@ -16,7 +16,11 @@ export class TeacherdetailsComponent {
   phone:'',
   userid:'',
   pincode:'',
-  address:''
+  address:{
+  address1:'',
+  state:'',
+  city:''
+  }
   }
 
   teacherdetail:FormGroup;
@@ -28,16 +32,33 @@ export class TeacherdetailsComponent {
       userid:['',[Validators.required, Validators.minLength(8),Validators.maxLength(8)]],
       phone: ['', [ Validators.required,Validators.pattern("^[0-9]*$"),Validators.minLength(10), Validators.maxLength(10)]],
       pincode:['',Validators.required],
-      address:['',Validators.required],
+      address: this.fb.group(this.addressForm())
 
     }
 
     )
   };
 
+  addressForm(){
+    return this.fb.group({
+      address1:['',Validators.required],
+      state:['',Validators.required],
+      city:['',Validators.required],
+
+    })
+  }
+
+//  get address(){
+//     return this.teacherdetail.get("address") as FormGroup
+//   }
+
   onAdd(){
     console.log(this.teacherdetail.value)
+    // console.log(this.teacherdetail.get(['address','address1']).value)
+    console.log(this.teacherdetail.get("address").value)
+
     this.dataArray.push(this.data)
+
   }
 
   get namevalidators(){

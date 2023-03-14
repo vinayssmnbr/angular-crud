@@ -10,14 +10,18 @@ import { ServiceService } from '../service.service';
 })
 export class SignupComponent {
   registerForm:FormGroup;
-  constructor(private fb:FormBuilder, private fb1:ServiceService){}
+  users: any;
+  constructor(private fb:FormBuilder, private fb1:ServiceService){
+    // this.fb1.users().subscribe((data)=>{
+    //   this.users= data
+    // });
+  }
 
   ngOnInit(){
     this.registerForm=this.fb.group({
       username:['',Validators.required],
       email:['',[Validators.required,Validators.email]],
       password:['',[Validators.required,Validators.minLength(6)]],
-      confirmpassword:['',Validators.required,],
       company:['',Validators.required]
 
     }
@@ -25,13 +29,21 @@ export class SignupComponent {
     )
   };
 
-  onSubmit(){
+  // onSubmit(){
+  //   console.log(this.registerForm.value)
+  //   this.fb1.sendData(this.registerForm.value).subscribe((res:any)=>{
+  //     this.fb1.sendData(this.registerForm)
+  //     console.log(res)
+  //   })
+  //   }
+
+  onSubmit(data:any){
     console.log(this.registerForm.value)
-    this.fb1.sendData(this.registerForm.value).subscribe((res:any)=>{
-      this.fb1.sendData(this.registerForm)
-      console.log(res)
+    this.fb1.saveUser(data).subscribe((result)=>{
+      this.fb1.saveUser(this.registerForm)
+      console.log(result)
     })
-    }
+  }
 
 }
 

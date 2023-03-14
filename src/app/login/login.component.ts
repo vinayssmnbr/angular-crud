@@ -20,6 +20,13 @@ export class LoginComponent {
       this.fb.sendData(this.loginForm1)
     })
 
+  // loginuser(data:any){
+  //   this.fb.users(data).subscribe((res:any)=>{
+  //     this.fb.users(this.loginForm1)
+  //     console.log(res)
+
+  //   })
+
 
 
   }
