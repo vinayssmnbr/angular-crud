@@ -12,13 +12,15 @@ export class LoginComponent {
   list:[]=[]
   constructor(private fb:ServiceService, ){}
   loginForm1 = new FormGroup({
-    user : new FormControl('',[ Validators.required,Validators.email]),
+    name : new FormControl('',[ Validators.required,Validators.email]),
     password : new FormControl('',[Validators.required,Validators.minLength(5)])
   })
-  loginuser(){
-    this.fb.sendData(this.loginForm1.value).subscribe((res:any)=>{
-      this.fb.sendData(this.loginForm1)
+  loginuser(data){
+    this.fb.sendData(data).subscribe((res:any)=>{
+      this.fb.sendData(data)
+      console.log(res)
     })
+    // if(username==name)
 
   // loginuser(data:any){
   //   this.fb.users(data).subscribe((res:any)=>{
