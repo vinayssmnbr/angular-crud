@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from 'express';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { ServiceService } from '../service.service';
+
 
 @Component({
   selector: 'app-login',
@@ -10,28 +12,39 @@ import { ServiceService } from '../service.service';
 })
 export class LoginComponent {
   list:[]=[]
-  constructor(private fb:ServiceService, ){}
+  name:string
+  password:string
+  constructor(private fb:ServiceService,private router:Router ){
+  }
   loginForm1 = new FormGroup({
     name : new FormControl('',[ Validators.required,Validators.email]),
     password : new FormControl('',[Validators.required,Validators.minLength(5)])
   })
+isLoggedIn=new BehaviorSubject<boolean>(false)
+
   loginuser(data){
     this.fb.sendData(data).subscribe((res:any)=>{
+      if(res?.token){
       this.fb.sendData(data)
+
+      {
       console.log(res)
-    })
-    // if(username==name)
+      this.fb.isLoggedIn.next(true);
 
-  // loginuser(data:any){
-  //   this.fb.users(data).subscribe((res:any)=>{
-  //     this.fb.users(this.loginForm1)
-  //     console.log(res)
+    }
 
-  //   })
-
-
+      }
+      error=>{
+        error:error;
+        alert("error")
+        console.log(error)
+      }
+    }
+    )
 
   }
+
+
   get uservalidators(){
     return this.loginForm1.get('user')
   }
@@ -40,9 +53,6 @@ export class LoginComponent {
     return this.loginForm1.get('password')
   }
 
-
-
-  // update
 
 
 }

@@ -28,29 +28,16 @@ name:any
 
 
 isLoggedIn=new BehaviorSubject<boolean>(false)
-// sendData(data:any) {
-//   console.log(data)
-//   const url = 'http://localhost:3000/api/studentroute/store';
-//   let headers = new HttpHeaders({
-//     'Content-Type': 'application/json',
-//   });
-//   this.isLoggedIn.next(true);
-//   let postOpt = Object.assign({ headers: headers, method: 'post' });
-//   return this.http.post(url,data, postOpt);
-// }
+
 
 url="http://localhost:3000/api/register"
 url1="http://localhost:3000/api/login"
 
 
 
-// users(){
-//   return this.http.get<[]>(this.url)
-// }
-
 sendData(data:any){
-  this.isLoggedIn.next(true);
-  return this.http.post(this.url1,data)
+  const data1=this.http.post(this.url1,data)
+  return data1
 
 }
 
