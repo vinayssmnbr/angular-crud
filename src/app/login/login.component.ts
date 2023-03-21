@@ -24,11 +24,13 @@ isLoggedIn=new BehaviorSubject<boolean>(false)
 
   loginuser(data){
     this.fb.sendData(data).subscribe((res:any)=>{
+      // localStorage.setItem("token",res.token)
       if(res?.token){
       this.fb.sendData(data)
 
       {
       console.log(res)
+      localStorage.setItem("token",res.token)
       this.fb.isLoggedIn.next(true);
 
     }

@@ -3,9 +3,9 @@ import { HttpClient} from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Todo } from './model/todo';
 import { BehaviorSubject } from 'rxjs';
-import { Router} from '@angular/router'
+import { Router } from '@angular/router';
 @Injectable({
-  providedIn: 'root'
+  providedIn:'root'
 })
 export class ServiceService {
   dataArray:any[]=[]
@@ -39,6 +39,28 @@ sendData(data:any){
   const data1=this.http.post(this.url1,data)
   return data1
 
+}
+allDataLogin(){
+  let headers=new HttpHeaders()
+  .set("Authorization",`bearer ${localStorage.getItem('res.token')}`)
+  this.http.get("http://localhost:3000/api/all",{headers}).subscribe((res:any)=>{
+    if(res?.token){
+      this.data
+
+      {
+      console.log(res)
+      localStorage.setItem("token",res.token)
+      this.isLoggedIn.next(true);
+
+    }
+
+      }
+      error=>{
+        error:error;
+        alert("error")
+        console.log(error)
+      }
+  })
 }
 
 saveUser(data){
@@ -87,4 +109,8 @@ for(let i=0; i<this.dataArray.length; i++){
 
 }}
 
+
+function result(value: Object): void {
+  throw new Error('Function not implemented.');
+}
 

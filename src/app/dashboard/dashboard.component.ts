@@ -1,4 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
+import { ServiceService } from '../service.service';
 import { DashService } from './dash.service';
 import { FooterComponent } from "./footer/footer.component";
 @Component({
@@ -7,7 +8,10 @@ import { FooterComponent } from "./footer/footer.component";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(public link:DashService){}
- 
+  constructor(public link:DashService,public fb:ServiceService){}
+  ngOnInit(){
+    this.fb.allDataLogin();
+  }
+
 
 }
