@@ -14,6 +14,8 @@ import { BannerComponent } from './banner/banner.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -39,7 +41,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
   ],
-  providers: [ServiceService],
+  providers: [ServiceService,CookieService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

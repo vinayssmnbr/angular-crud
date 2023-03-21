@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-import { Todo } from './model/todo';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 @Injectable({
@@ -30,8 +29,11 @@ name:any
 isLoggedIn=new BehaviorSubject<boolean>(false)
 
 
-url="http://localhost:3000/api/register"
-url1="http://localhost:3000/api/login"
+// url="http://localhost:3000/api/register"
+// url1="http://localhost:3000/api/login"
+
+url="http://localhost:8000/api/user/register"
+url1="http://localhost:8000/api/user/login"
 
 
 
@@ -42,8 +44,8 @@ sendData(data:any){
 }
 allDataLogin(){
   let headers=new HttpHeaders()
-  .set("Authorization",`bearer ${localStorage.getItem('res.token')}`)
-  this.http.get("http://localhost:3000/api/all",{headers}).subscribe((res:any)=>{
+  .set("Authorization",`bearer ${localStorage.getItem('token')}`)
+  this.http.get("http://localhost:8000/api/user/auth",{headers}).subscribe((res:any)=>{
     if(res?.token){
       this.data
 
