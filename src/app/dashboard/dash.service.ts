@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,21 @@ export class DashService {
   contact:boolean=false;
   teacherdetails:boolean=false;
   studentdetails:boolean=false;
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+//news api
+private apiUrl='http://localhost:8000/api/news'
+getNews():Observable<any>{
+  return this.http.get<any>(this.apiUrl)
+
+}
+
+searchnews(query:string){
+  return this.http.get<any>(`${this.apiUrl}?q=${query}`)
+
+}
+
+
   clear(){
     this.home=false;
     this.about=false;

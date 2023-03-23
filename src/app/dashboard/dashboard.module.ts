@@ -14,7 +14,8 @@ import { TeacherdetailsComponent } from './teacherdetails/teacherdetails.compone
 import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule, FormControl,FormGroup } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ReactiveFormsModule, FormControl,FormGroup } from '@angular/forms';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
     // FormControl,
     // FormGroup,
 

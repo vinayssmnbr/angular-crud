@@ -1,29 +1,53 @@
-<div>
-    <div>
-        <app-header></app-header>
-    </div>
-    <div>
-      <app-sidebar></app-sidebar>
+l<div>
+  <div>
+    <app-header></app-header>
   </div>
-    <main>
-    <div style="height: calc(100vh - 180px); display: flex;">
-        <div style="flex-grow: 1">
-            <app-about *ngIf="link?.about"></app-about>
+  <div>
+    <app-sidebar></app-sidebar>
+  </div>
+  <main>
+    <div>
+      <div>
+        <app-about *ngIf="link?.about"></app-about>
 
-        </div>
-        <div style="flex-grow: 1">
-            <app-contact *ngIf="link?.contact"></app-contact>
-        </div>
-        <div style="flex-grow: 1">
-          <app-teacherdetails *ngIf="link?.teacherdetails"></app-teacherdetails>
+      </div>
+      <div style="flex-grow: 1">
+        <app-contact *ngIf="link?.contact"></app-contact>
+      </div>
+      <div style="flex-grow: 1">
+        <app-teacherdetails *ngIf="link?.teacherdetails"></app-teacherdetails>
       </div>
       <div style="flex-grow: 1">
         <app-studentdetails *ngIf="link?.studentdetails"></app-studentdetails>
-    </div>
+      </div>
 
     </div>
-</main>
-    <div>
-        <app-footer></app-footer>
+    <div class="search-hero">
+      <input type="text" [(ngModel)]="query" placeholder="Search for news">
+      <button (click)="search()">Search</button>
+
+      <ul>
+        <li *ngFor="let article of articless">{{ article.title }}
+          {{article.content}} {{article.description}} {{article.author}}
+        </li>
+
+      </ul>
     </div>
+    <div class="container-fluid ">
+      <div class="row mb-3">
+        <div *ngFor="let data of newsList" class="col-lg-3 mt-3 mb-3">
+          <div class="box">
+            <h3>{{data.author}}</h3>
+            <img src="{{data.urlToImage}}" width="100%" alt="">
+            <h5 class="mt-3 mb-3">{{data.title}}</h5>
+            <p>{{data.content}}</p>
+            <a href="{{data.url}}">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div>
+    <app-footer></app-footer>
+  </div>
 </div>
