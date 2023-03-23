@@ -15,7 +15,7 @@ export class DashService {
 
 //news api
 private apiUrl='http://localhost:8000/api/news'
-getNews():Observable<any>{
+getNews(){
   return this.http.get<any>(this.apiUrl)
 
 }
