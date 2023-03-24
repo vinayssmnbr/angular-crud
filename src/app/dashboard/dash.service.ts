@@ -21,7 +21,12 @@ getNews(){
 }
 
 searchnews(query:string){
-  return this.http.get<any>(`${this.apiUrl}?q=${query}`)
+  return this.http.get<any>(`${this.apiUrl}?searchTerm=${query}`)
+  // return this.http.get<any>(`${this.apiUrl}?searchTerm=${query}&source=${source}`)
+}
+
+filternews(source:string[]){
+  return this.http.get<any>(`${this.apiUrl}?source=${source}`)
 
 }
 

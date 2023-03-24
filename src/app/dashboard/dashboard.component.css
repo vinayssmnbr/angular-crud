@@ -9,6 +9,24 @@ main
   background-color: #ddd;
 }
 
+.filter{
+  display: inline-block;
+  justify-content: space-between;
+  gap:20px
+}
+.filter input{
+  margin-left:20px;
+}
+/* .filter .checkbox{
+  margin:10px;
+}
+.filter .checkbox input{
+  margin:10px;
+
+} */
+
+
+
 
 
 

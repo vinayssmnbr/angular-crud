@@ -15,8 +15,8 @@ import { StudentdetailsComponent } from './studentdetails/studentdetails.compone
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule, FormControl,FormGroup } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,14 @@ import { HttpClient } from '@angular/common/http';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    NgMultiSelectDropDownModule
+
+
+
+
+
     // FormControl,
     // FormGroup,
 
