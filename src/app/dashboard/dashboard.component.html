@@ -32,21 +32,7 @@ l<div>
 
       </ul>
     </div>
-    <!-- <div class="filter" (click)="filter()">
-      <label for="Engadget" class="checkbox">
-        <input type="checkbox" name="Engadget"  id="Engadget">Engadget
-      </label>
-      <label for="MacRumors" class="checkbox">
-        <input type="checkbox" name="MacRumors"  id="MacRumors">MacRumors
-      </label>
-      <label for="9to5Mac" class="checkbox">
-        <input type="checkbox" name="9to5Mac" id="9to5Mac">9to5Mac
-      </label>
-      <label for="CNET" class="checkbox">
-        <input type="checkbox" name="CNET"  id="CNET">CNET
-      </label>
-    </div> -->
-
+    <h3>Select Source</h3>
     <div class="filter" *ngFor="let source of sourceDetails">
       <input class="form-check-input" (change)="filter($event.target)"name="" type="checkbox" id="" [value]="source">
           {{source}}
