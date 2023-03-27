@@ -22,7 +22,8 @@ l<div>
       </div>
 
     </div>
-    <div class="search-hero">
+
+    <div class="search-hero col-6">
       <input type="text" [(ngModel)]="query" placeholder="Search for news">
       <button (click)="search()">Search</button>
 
@@ -32,12 +33,24 @@ l<div>
 
       </ul>
     </div>
+
+
     <h3>Select Source</h3>
     <div class="filter" *ngFor="let source of sourceDetails">
-      <input class="form-check-input" (change)="filter($event.target)"name="" type="checkbox" id="" [value]="source">
-          {{source}}
+      <input class="form-check-input" (change)="filter($event.target)" name="" type="checkbox" id="" [value]="source">
+      {{source}}
+    </div>
 
-  </div>
+    <div class="container-fluid">
+      <div class="row pagination">
+        <div class="col-lg-6 prev">
+          <button (click)="prev()">previous</button>
+        </div>
+        <div class="col-lg-6 next">
+          <button (click)="next()">next</button>
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid ">
       <div class="row mb-3">

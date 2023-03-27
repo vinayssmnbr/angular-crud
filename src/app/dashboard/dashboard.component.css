@@ -26,7 +26,19 @@ main
 } */
 
 
+.pagination{
+  /* display: flex;
+  justify-content: space-around; */
 
+}
+.pagination .next{
+  display: flex;
+  justify-content: flex-end;
+}
+.pagination button{
+  padding: 10px 20px;
+  
+}
 
 
 
