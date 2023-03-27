@@ -43,10 +43,6 @@ export class DashboardComponent {
     })
   }
   filter(checkbox){
-    // this.link.filternews(this.source).subscribe(resp=>{
-    //   console.log(resp)
-    //   this.newsList=resp.response
-    // })
       if(this.isChecked[checkbox.value] == true) {
        this.isChecked[checkbox.value]=false
       } else {
@@ -66,7 +62,4 @@ addSkill() {
 
 
 }
-
-
-
 }
