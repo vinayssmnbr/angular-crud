@@ -16,6 +16,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './auth.guard';
+import { SocialLoginModule } from 'angularx-social-login';
+
+
 
 
 @NgModule({
@@ -35,7 +38,10 @@ import { AuthGuard } from './auth.guard';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    DashboardModule
+    DashboardModule,
+    SocialLoginModule
+
+
 
 
 
